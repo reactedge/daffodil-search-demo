@@ -1,0 +1,29 @@
+<div class="search-container">
+
+  <h2>Explore Our Catalog</h2>
+  <div class="search-form">
+
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="What are looking for?"
+    />
+
+    <button
+      (click)="handleSearch()"
+      [disabled]="status === 'searching'"
+    >
+      Search
+    </button>
+
+  </div>
+
+  <div
+    class="search-status"
+    *ngIf="status !== 'idle'"
+  >
+    <p>Status: {{ status }}</p>
+    <p>{{ message }}</p>
+  </div>
+
+</div>

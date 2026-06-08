@@ -6,7 +6,12 @@
     "outDir": "./out-tsc/app",
     "types": [
       "node"
-    ]
+    ],
+    "paths": {
+      "@daffodil/telemetry": [
+        "../daffodil-telemetry/src/index.ts"
+      ]
+    }
   },
   "include": [
     "src/**/*.ts"
